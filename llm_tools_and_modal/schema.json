@@ -1,0 +1,36 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Get PubChem information",
+    "description": "Retrieves molecule information.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://YOUR-URL.modal.run"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Get PubChem information for a molecule",
+        "operationId": "GetPubChemInfo",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The name of the molecule to retrieve information for."
+          }
+        ],
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
